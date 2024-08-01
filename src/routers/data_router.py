@@ -9,7 +9,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/data")
-data_controller = DataController(Path("output/historical_data"))
+data_path = Path("output/historical_data")
+data_path.mkdir(exist_ok=True, parents=True)
+data_controller = DataController(data_path)
 
 
 @router.get("/getMetaData")
