@@ -1,0 +1,9 @@
+/src/private_keys/
+/output/*
+/model_checkpoint/
+/.idea_back/
+/Roadmap.md
+/.idea/
+/logs/
+*.db
+/py_env/
